@@ -1,0 +1,43 @@
+.hero-section{
+    height: calc(100vh - 66.86px);
+    .hero-fading-slide{
+        .item{
+            img{
+                height: calc(100vh - 66.86px);
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+    .owl-nav{
+        position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    flex-direction: column;
+    }
+}
+
+.sun-unique-story{
+    .content-para{
+        img{
+            width: 33%; 
+            height: auto;
+            min-width: 150px;
+            float: left;
+            margin-right:5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 1.7rem; 
+            border-radius: 50%;
+            shape-outside:circle();
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: $boxShadow;
+        }
+        .dr-sunita{
+            color: $colorPrimary;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.navbar {
+    box-shadow: $boxShadow;
+    @media screen and (max-width:991.9px) {
+        position: relative;
+    z-index: 1050;
+    .navbar-collapse {
+    position: fixed;
+    top: 94px;
+    background: $colorWhite;
+    height: calc(100vh - 94px);
+    box-shadow: rgba($colorBlack, 0.25) 0px 25px 50px -12px;
+    width: 28rem;
+    @media screen and (max-width:29rem) {
+        width: 80%;
+    }
+    transform: translateX(-100%);
+    left: 0;
+    padding: 20px;
+    overflow: hidden;
+    &.show{
+        transform: translateX(0);
+    }
+    .navbar-nav{
+        overflow: auto;
+    height: 100%;
+    }
+}
+    }
+    .navbar-toggler{
+        padding: 0;
+        border: none;
+    }
+        .navbar-brand{
+            img{
+                width: 20rem;
+            }
+        }
+        i.fa-solid.fa-bars{
+            font-size: 2rem;
+            @include respond (tab-land-before){
+                color: rgba($colorBlack, 1);
+            }
+        }
+        .navbar-toggler {
+            &:focus {
+                border: none !important;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                &:not(:last-child){
+                    padding-right: 2rem;
+                    @media screen and (max-width:991.9px) {
+                        border-bottom: 1px solid rgba($colorBlack, $alpha: 0.5);
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    }
+                }
+                a{
+                    font-weight: 500;
+                    color: $colorBlack;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &.fixed-top {
+            top: -40px;
+            transform: translateY(40px);
+            transition: transform .3s;
+            background: $colorBlack;
+            position: fixed!important;
+            .nav-link{
+                color: $colorWhite!important;
+            }
+            .navbar-brand{
+            img{
+                filter: brightness(20) invert(0);
+            }
+        }
+        }
+    }
