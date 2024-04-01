@@ -1,7 +1,12 @@
 .navbar {
-    box-shadow: $boxShadow;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    width: 100%;
+    left: 0;
+    z-index: 2;
     @media screen and (max-width:991.9px) {
-        position: relative;
+        position: fixed;
     z-index: 1050;
     .navbar-collapse {
     position: fixed;
@@ -33,10 +38,12 @@
         .navbar-brand{
             img{
                 width: 20rem;
+                filter: brightness(20) invert(0);
             }
         }
         i.fa-solid.fa-bars{
             font-size: 2rem;
+            color: $colorWhite;
             @include respond (tab-land-before){
                 color: rgba($colorBlack, 1);
             }
@@ -60,7 +67,7 @@
                 }
                 a{
                     font-weight: 500;
-                    color: $colorBlack;
+                    color: $colorWhite;
                     font-size: 15px;
                 }
             }

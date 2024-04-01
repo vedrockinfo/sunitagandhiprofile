@@ -7,10 +7,10 @@
   0% {
     transform: scale(1); }
   75% {
-    transform: scale(1.75);
+    transform: scale(1.45);
     opacity: 1; }
   100% {
-    transform: scale(2);
+    transform: scale(1.75);
     opacity: 0; } }
 
 * {
@@ -48,21 +48,33 @@ h6 {
 
 .heading-hero-primary {
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 58px;
   font-weight: 700;
   color: #ffffff;
-  text-align: center;
   line-height: 1.26;
   text-shadow: 3px 3px 20px #00000066, -2px 1px 30px #00000066; }
-  @media only screen and (max-width: 992px) {
+  @media screen and (min-width: 1399.9px) {
+    .heading-hero-primary {
+      font-size: 67px; } }
+  @media screen and (min-width: 992.1px) and (max-width: 1199.9px) {
     .heading-hero-primary {
       font-size: 48px; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     .heading-hero-primary {
       font-size: 36px; } }
+  @media only screen and (max-width: 768px) {
+    .heading-hero-primary {
+      font-size: 36px;
+      text-align: center;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto; } }
   @media only screen and (max-width: 575px) {
     .heading-hero-primary {
       font-size: 30px; } }
+  @media screen and (max-width: 300px) {
+    .heading-hero-primary {
+      font-size: 26px; } }
 
 .heading-hero-secondary {
   text-transform: uppercase;
@@ -139,21 +151,21 @@ h6 {
   color: #19649c;
   text-transform: uppercase; }
 
-.conten-para p,
+.content-para p,
 .content-para li {
   font-size: 18px;
   line-height: 30px;
   font-weight: normal; }
-  .conten-para p:last-child,
+  .content-para p:last-child,
   .content-para li:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 992px) {
-    .conten-para p,
+    .content-para p,
     .content-para li {
       font-size: 16px;
       line-height: 1.7; } }
   @media only screen and (max-width: 768px) {
-    .conten-para p,
+    .content-para p,
     .content-para li {
       font-size: 14px;
       line-height: 1.7; } }
@@ -303,34 +315,26 @@ h6 {
   padding: 10px 24px;
   line-height: 1;
   text-transform: capitalize;
-  border: 1.9px solid #19649c !important;
-  background: #19649c;
+  border: 1.9px solid #6facde !important;
+  background: #6facde;
   color: #ffffff;
   transition: 0.4s ease;
   display: inline-block; }
   .global-btn-two:hover {
-    color: #19649c;
-    background: transparent; }
-
-.global-btn-three {
-  font-size: 15px;
-  padding: 10px 24px;
-  line-height: 1;
-  text-transform: capitalize;
-  border: 1.9px solid #92278f;
-  background: transparent;
-  color: #92278f;
-  transition: 0.4s ease;
-  display: inline-block; }
-  .global-btn-three:hover {
     color: #ffffff;
-    background: #92278f; }
+    background: transparent;
+    border-color: #ffffff !important; }
 
 .navbar {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; }
+  position: fixed;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  z-index: 2; }
   @media screen and (max-width: 991.9px) {
     .navbar {
-      position: relative;
+      position: fixed;
       z-index: 1050; }
       .navbar .navbar-collapse {
         position: fixed;
@@ -356,9 +360,11 @@ h6 {
     padding: 0;
     border: none; }
   .navbar .navbar-brand img {
-    width: 20rem; }
+    width: 20rem;
+    filter: brightness(20) invert(0); }
   .navbar i.fa-solid.fa-bars {
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #ffffff; }
   .navbar .navbar-toggler:focus {
     border: none !important;
     box-shadow: none; }
@@ -371,7 +377,7 @@ h6 {
         padding-bottom: 1rem; } }
   .navbar .navbar-nav .nav-item a {
     font-weight: 500;
-    color: #110B11;
+    color: #ffffff;
     font-size: 15px; }
   .navbar.fixed-top {
     top: -40px;
@@ -385,9 +391,9 @@ h6 {
       filter: brightness(20) invert(0); }
 
 .hero-section {
-  height: calc(100vh - 66.86px); }
+  height: 100vh; }
   .hero-section .hero-fading-slide .item img {
-    height: calc(100vh - 66.86px);
+    height: 100vh;
     width: 100%;
     object-fit: cover;
     object-position: center; }
@@ -396,22 +402,150 @@ h6 {
     bottom: 3rem;
     right: 3rem;
     flex-direction: column; }
+  .hero-section .sun-img {
+    position: relative; }
+    .hero-section .sun-img::before {
+      content: "";
+      background: #000;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .sun-unique-story .content-para img {
-  width: 33%;
-  height: auto;
-  min-width: 150px;
-  float: left;
-  margin-right: 5rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1.7rem;
-  border-radius: 50%;
-  shape-outside: circle();
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; }
+  margin-bottom: 1.5rem; }
+  @media only screen and (min-width: 768.1px) {
+    .sun-unique-story .content-para img {
+      width: 33%;
+      height: auto;
+      min-width: 150px;
+      float: left;
+      margin-right: 5rem;
+      margin-top: 1.7rem;
+      border-radius: 50%;
+      shape-outside: circle();
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; } }
 
 .sun-unique-story .content-para .dr-sunita {
   color: #6facde;
   font-weight: 600; }
+
+.googl-map .map-grid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: flex-end; }
+  .googl-map .map-grid .indiamapgrid {
+    column-count: 2; }
+    .googl-map .map-grid .indiamapgrid p {
+      display: flex;
+      gap: 10px;
+      line-height: 18px;
+      align-items: baseline;
+      font-size: 14px; }
+      .googl-map .map-grid .indiamapgrid p span {
+        display: block;
+        aspect-ratio: 1;
+        height: 14px;
+        width: 14px;
+        border-radius: 2px; }
+
+.googl-map .alfagrid {
+  margin-top: 30px; }
+  @media screen and (min-width: 1400px) {
+    .googl-map .alfagrid {
+      column-count: 5; } }
+  @media screen and (min-width: 992px) and (max-width: 1399.9px) {
+    .googl-map .alfagrid {
+      column-count: 3; } }
+  @media screen and (min-width: 575.9px) and (max-width: 991.9px) {
+    .googl-map .alfagrid {
+      column-count: 3; } }
+  @media screen and (max-width: 575.8px) {
+    .googl-map .alfagrid {
+      column-count: 2; } }
+  .googl-map .alfagrid p {
+    display: flex;
+    gap: 10px;
+    line-height: 18px;
+    align-items: baseline;
+    font-size: 14px; }
+    .googl-map .alfagrid p span {
+      display: block;
+      aspect-ratio: 1;
+      height: 14px;
+      width: 14px;
+      border-radius: 2px; }
+
+.sbiography-video .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 5; }
+  .sbiography-video .container .heading-hero-primary {
+    border-bottom: 3px solid;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem; }
+  .sbiography-video .container .hero-content {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300; }
+  .sbiography-video .container .video-btn {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1; }
+    .sbiography-video .container .video-btn::before, .sbiography-video .container .video-btn::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid #ff0000;
+      transition: .5s; }
+    .sbiography-video .container .video-btn::before {
+      animation: ripple 2s linear infinite; }
+    .sbiography-video .container .video-btn:after {
+      animation: ripple 2s linear 1s infinite; }
+    .sbiography-video .container .video-btn i {
+      padding-left: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 7.5px; }
+  .sbiography-video .container .hero-btns {
+    margin-top: 4rem; }
+    .sbiography-video .container .hero-btns .global-btn-two {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem; }
+
+.sbiography-video .modal-content {
+  height: 90vh;
+  width: 90vw; }
+
+@media only screen and (max-width: 768px) {
+  .sbiography-video .col-md-6 {
+    text-align: center; } }

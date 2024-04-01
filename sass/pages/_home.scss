@@ -1,9 +1,9 @@
 .hero-section{
-    height: calc(100vh - 66.86px);
+    height: 100vh;
     .hero-fading-slide{
         .item{
             img{
-                height: calc(100vh - 66.86px);
+                height: 100vh;
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
@@ -16,17 +16,31 @@
     right: 3rem;
     flex-direction: column;
     }
+    .sun-img{
+      position: relative;
+      &::before{
+        content: "";
+        background: #000;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
 }
 
 .sun-unique-story{
     .content-para{
         img{
-            width: 33%; 
+            margin-bottom: 1.5rem;
+            @include respond (minWidth768){
+                width: 33%; 
             height: auto;
             min-width: 150px;
             float: left;
             margin-right:5rem;
-            margin-bottom: 1.5rem;
             margin-top: 1.7rem; 
             border-radius: 50%;
             shape-outside:circle();
@@ -34,10 +48,158 @@
             object-fit: cover;
             object-position: center;
             box-shadow: $boxShadow;
+            }
         }
         .dr-sunita{
             color: $colorPrimary;
             font-weight: 600;
         }
     }
+}
+
+.googl-map {
+  .map-grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: flex-end;
+
+    .indiamapgrid {
+      column-count: 2;
+
+      p {
+        display: flex;
+        gap: 10px;
+        line-height: 18px;
+        align-items: baseline;
+        font-size: 14px;
+
+        span {
+          display: block;
+          aspect-ratio: 1;
+          height: 14px;
+          width: 14px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  .alfagrid {
+    @media screen and (min-width:1400px) {
+      column-count: 5;
+    }
+
+    @media screen and (min-width:992px) and (max-width:1399.9px) {
+      column-count: 3;
+    }
+
+    @media screen and (min-width:575.9px) and (max-width:991.9px) {
+      column-count: 3;
+    }
+
+    @media screen and (max-width:575.8px) {
+      column-count: 2;
+    }
+
+    margin-top: 30px;
+
+    p {
+      display: flex;
+      gap: 10px;
+      line-height: 18px;
+      align-items: baseline;
+      font-size: 14px;
+
+      span {
+        display: block;
+        aspect-ratio: 1;
+        height: 14px;
+        width: 14px;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.sbiography-video{
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 5;
+    .heading-hero-primary{
+      border-bottom: 3px solid;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    }
+    .hero-content{
+      color: $colorWhite;
+      font-size: 18px;
+      font-weight: 300;
+
+    }
+    .video-btn{
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+        &::before, &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          bottom: 0;
+          left: 0;
+          border-radius: 50%;
+          border: 1px solid #ff0000;
+          transition: .5s;
+        }
+        &::before{
+          animation: ripple 2s linear infinite;
+        }
+        &:after{
+          animation: ripple 2s linear 1s infinite;
+        }
+        i{
+          padding-left: 0;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          z-index: 1;
+          transform: translateY(-50%);
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          font-size: 7.5px;
+        }
+      }
+      .hero-btns{
+        margin-top: 4rem;
+        .global-btn-two{
+          display: inline-flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+  }
+  .modal-content{
+    height: 90vh;
+    width: 90vw;
+  }
+  .col-md-6 {
+    @include respond (maxWidth768){
+      text-align: center;
+    }
+}
 }

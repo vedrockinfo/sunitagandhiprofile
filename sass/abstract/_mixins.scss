@@ -24,28 +24,14 @@
     padding: 10px 24px;
     line-height: 1;
     text-transform: capitalize;
-    border: 1.9px solid $colorBgBlue!important;
-    background: $colorBgBlue;
+    border: 1.9px solid $colorPrimary!important;
+    background: $colorPrimary;
     color: $colorWhite;
     transition: $transition;
     display: inline-block;
     &:hover{
-        color: $colorBgBlue;
-        background: transparent;
-    }
-}
-@mixin GlobalButtonThree{
-    font-size: 15px;
-    padding: 10px 24px;
-    line-height: 1;
-    text-transform: capitalize;
-    border: 1.9px solid $colorPurple;
-    background: transparent;
-    color: $colorPurple;
-    transition: $transition;
-    display: inline-block;
-    &:hover{
         color: $colorWhite;
-        background: $colorPurple;
+        background: transparent;
+        border-color: $colorWhite!important;
     }
 }

@@ -22,23 +22,36 @@ h6 {
 
 .heading-hero-primary {
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 58px;
   font-weight: 700;
   color: $colorWhite;
-  text-align: center;
   line-height: 1.26;
   text-shadow: 3px 3px 20px #00000066, -2px 1px 30px #00000066;
+  @media screen and (min-width:1399.9px) {
+    font-size: 67px;
+  }
+
+  @media screen and (min-width:992.1px) and (max-width:1199.9px) {
+    font-size: 48px;
+  }
 
   @include respond(maxWidth992) {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   @include respond(maxWidth768) {
     font-size: 36px;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include respond(maxWidth575) {
     font-size: 30px;
+  }
+  @media screen and (max-width:300px) {
+    font-size: 26px;
   }
 }
 
@@ -128,7 +141,7 @@ h6 {
   text-transform: uppercase;
 }
 
-.conten-para p,
+.content-para p,
 .content-para li {
   font-size: 18px;
   line-height: 30px;
