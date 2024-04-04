@@ -190,3 +190,14 @@ jQuery(document).ready(function () {
     });
 
 });
+
+// jQuery(document).ready(function () {
+//     jQuery(".load-more").click(function () {
+//         jQuery(this).parent().addClass("loaded");
+//     });
+// });
+$(function () {
+    $(".load-more").on("click", function () {
+        $(".tab-pane").toggleClass("loaded");
+    });
+});

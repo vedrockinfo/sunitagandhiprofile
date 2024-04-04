@@ -1175,6 +1175,42 @@ footer{
   }
 }
 .projects-category{
+  .tab-pane{
+    &#ongoing-tab-panel{
+    .project-data{
+      height: 22rem;
+    }
+    }    &.loaded{
+      .collapsed{
+        height: auto;
+        & + .load-more{
+          .load-now{
+            display: none;
+          }
+          .load-less{
+            display: inline-block;
+            cursor: pointer;
+          }
+        }
+      }
+  }
+  }
+  .collapsed{
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+  }
+  .load-more {
+    text-align: center;
+    margin-top: 3rem;
+    .load-now{
+            display: inline-block;
+            cursor: pointer;
+          }
+    .load-less{
+      display: none;
+    }
+}
   .tab-content{
     border: 1px solid  rgba($colorPrimary, 0.3);
     border-top: none;
@@ -1190,6 +1226,7 @@ footer{
       }
       .project-data{
         padding: 3rem 1rem;
+        // height: 22rem;
         .heading-tertiary{
           margin-bottom: 0!important;
         }

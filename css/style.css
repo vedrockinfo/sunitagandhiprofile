@@ -1375,6 +1375,31 @@ footer {
         margin-bottom: 1.5rem;
         letter-spacing: normal; }
 
+.projects-category .tab-pane#ongoing-tab-panel .project-data {
+  height: 22rem; }
+
+.projects-category .tab-pane.loaded .collapsed {
+  height: auto; }
+  .projects-category .tab-pane.loaded .collapsed + .load-more .load-now {
+    display: none; }
+  .projects-category .tab-pane.loaded .collapsed + .load-more .load-less {
+    display: inline-block;
+    cursor: pointer; }
+
+.projects-category .collapsed {
+  height: 0;
+  overflow: hidden;
+  transition: 1s; }
+
+.projects-category .load-more {
+  text-align: center;
+  margin-top: 3rem; }
+  .projects-category .load-more .load-now {
+    display: inline-block;
+    cursor: pointer; }
+  .projects-category .load-more .load-less {
+    display: none; }
+
 .projects-category .tab-content {
   border: 1px solid rgba(6, 46, 146, 0.3);
   border-top: none;
