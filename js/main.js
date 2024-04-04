@@ -48,7 +48,7 @@ $('.hero-fading-slide').owlCarousel({
     animateOut: 'fadeOut',
     navText: ['<i class="fa-solid fa-arrow-up"></i>', '<i class="fa-solid fa-arrow-down"></i>'],
     dots: false,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     responsive: {
         0: {
@@ -84,3 +84,109 @@ $('.country-slider').owlCarousel({
         }
     }
 })
+
+$(function () {
+    $("#tabs").tabs();
+});
+
+$('.inspiration-quotes').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
+
+
+$('.awards-slider').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+
+$('.affiliation-slider').owlCarousel({
+    loop: false,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$('.media-slider').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: false,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1000: {
+            items: 2
+        }
+    }
+})
+
+
+jQuery(document).ready(function () {
+    jQuery('.contact-form .form-control').on('focus', function () {
+        jQuery(this).parent().addClass('focused');
+    }).on('blur', function () {
+        jQuery(this).parent().removeClass('focused');
+    }).on('input', function () {
+        jQuery(this).parent().addClass('inputted');
+    });
+
+});

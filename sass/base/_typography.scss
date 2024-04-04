@@ -9,6 +9,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   color: $colorBlack;
+  @include respond (maxWidth992){
+    font-size: 14px;
+  }
 }
 
 h1,
@@ -104,46 +107,37 @@ h6 {
 .heading-secondary {
   line-height: 1.25em;
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba($colorBlack, 0.7);
+}
+
+.heading-tertiary{
+  line-height: 1.25em;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
   font-weight: 700;
   color: $colorBgBlue;
-}
+  @include respond(maxWidth992) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 
-.heading-tertiary {
-  line-height: 1.25em;
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: $colorBgBlue;
-}
+  @include respond(maxWidth768) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 
-.heading-four {
-  line-height: 1.25em;
-  margin-bottom: 20px;
-  font-size: 14px;
-  border: 1px solid $colorBgBlue;
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-weight: 600;
-  color: $colorBgBlue;
-  text-transform: uppercase;
+  @include respond(maxWidth575) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
 }
-
-.heading-five {
-  line-height: 1.25em;
-  margin-bottom: 20px;
-  font-size: 14px;
-  border: 1px solid $colorBgBlue;
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-weight: 600;
-  color: $colorBgBlue;
-  text-transform: uppercase;
-}
-
 .content-para p,
 .content-para li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: normal;
 
@@ -152,11 +146,6 @@ h6 {
   }
 
   @include respond(maxWidth992) {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  @include respond(maxWidth768) {
     font-size: 14px;
     line-height: 1.7;
   }

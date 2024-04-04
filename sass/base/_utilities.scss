@@ -53,6 +53,15 @@
     height: 30px;
   }
 }
+.space-two {
+  height: 70px;
+  @include respond (maxWidth992){
+    height: 50px;
+  }
+  @include respond (maxWidth768){
+    height: 40px;
+  }
+}
 
 .primary-list {
   @media screen and (max-width:575px) {
@@ -298,10 +307,23 @@
     border: 1px solid $colorPrimary !important;
     height: 4.5rem;
     width: 4.5rem;
-    border-radius: 50%;
+    // border-radius: 50%;
 
     i {
       color: rgba($colorWhite, $alpha: 1);
     }
   }
 }
+.owl-dots{
+    .owl-dot{
+      span{
+        background: rgba($colorPrimary, 0.3)!important;
+        margin: 5px 3px!important;
+      }
+      &.active{
+        span{
+          background: rgba($colorPrimary, 1)!important;
+        }
+      }
+    }
+  } 

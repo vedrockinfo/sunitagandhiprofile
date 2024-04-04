@@ -8,7 +8,7 @@
 
 @mixin GlobalButtonOne{
     font-size: 15px;
-    padding: 10px 24px;
+    padding: 10px 24px!important;
     line-height: 1;
     text-transform: capitalize;
     border: 1.9px solid $colorWhite;
@@ -30,8 +30,25 @@
     transition: $transition;
     display: inline-block;
     &:hover{
-        color: $colorWhite;
+        color: $colorPrimary;
         background: transparent;
-        border-color: $colorWhite!important;
+        border-color: $colorPrimary!important;
+    }
+}
+@mixin GlobalButtonThree{
+    font-size: 15px;
+    padding: 10px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid #ef1d26!important;
+    background: #ef1d26;
+    color: $colorWhite;
+    transition: $transition;
+    display: inline-block;
+    border-radius: 0 20px 20px 0;
+    &:hover{
+        color: $colorWhite;
+        background: #ef1d26;
+        border-color: #ef1d26!important;
     }
 }
